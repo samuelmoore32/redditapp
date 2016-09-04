@@ -14,7 +14,7 @@ app.controller('RedditCtrl', function($scope) {
                 title: 'Second Story'
               }
 
-  ]
+  ];
 })
 
 app.run(function($ionicPlatform) {
