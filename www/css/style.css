@@ -3,3 +3,7 @@ h3.story-title{
     white-space: normal;
     height:3.6em;
 }
+
+p.story-selftext{
+    white-space: normal;
+}
