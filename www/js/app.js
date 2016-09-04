@@ -12,10 +12,8 @@ app.controller('RedditCtrl', function($scope) {
               },
               {
                 title: 'Second Story'
-              },
-              {
-                title: 'THirds Story'
               }
+
   ]
 })
 
