@@ -5,16 +5,15 @@
 // the 2nd parameter is an array of 'requires'
 var app = angular.module('starter', ['ionic']);
 
-app.controller('RedditCtrl', function($scope) {
-  $scope.stories = [
-              {
-                title: 'First Story'
-              },
-              {
-                title: 'Second Story'
-              }
+app.controller('RedditCtrl', function($scope, $http) {
+  $scope.stories =  [];
 
-  ];
+  $http.get('https://www.reddit.com/r/worldnews/.json')
+  .success(function(response){
+    angular.forEach(response.data.children, function(child){
+      $scope.stories.push(child.data);
+    });
+  });
 })
 
 app.run(function($ionicPlatform) {
